@@ -1,0 +1,16 @@
+.author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  &_img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+  &_name {
+    margin: 0;
+    color: #aaa
+  }
+}

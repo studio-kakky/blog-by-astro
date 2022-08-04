@@ -1,4 +1,5 @@
 import { JSX  } from "preact"
+import { Author } from "./author";
 import styles from './entry.module.scss'
 
 export const Entry = (): JSX.Element => {
@@ -10,10 +11,10 @@ export const Entry = (): JSX.Element => {
         </div>
         <h2 className={styles.header_h}>記事のタイトル</h2>
       </header>
-      <div className={styles.author}>
-        <img className={styles.author_img} src="https://via.placeholder.com/480x300" />
-        <p className={styles.author_name}>studio-kakky</p>
-      </div>
+      <Author 
+        thumbNail="https://via.placeholder.com/480x300"
+        name="studio-kakky"
+      />
       <div className={styles.body}>
         <div className="wisywig"
           dangerouslySetInnerHTML={{__html: `
