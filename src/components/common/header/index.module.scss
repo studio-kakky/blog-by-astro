@@ -1,6 +1,26 @@
-.aa {
-    background-color: black;
-    p {
-        color: #fff;
+.header {
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #0068B2;
+  &_h {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 0;
+    gap: 8px;
+    &_text {
+      color: #0068B2;
+      line-height: 1;
+      font-size: 15px;
     }
+  }
+}
+
+.logo {
+  display: flex;
+  width: 200px;
+  svg {
+    position: relative;
+    fill: #0068B2;
+  }
 }

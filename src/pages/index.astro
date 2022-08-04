@@ -1,10 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { CommonHeader } from '../components/common/header';
+import { Entries } from '../components/entries/entries';
 ---
+<style>
+	main {
+		margin: 0;
+		background-color: #fff;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+</style>
 <Layout title="Welcome to Astro.">
 	<CommonHeader />
-	<div class="header">
-		<h1>studio-kakkyのブログ</h1>
-	</div>
+	<main>
+		<Entries />
+	</main>
 </Layout>
