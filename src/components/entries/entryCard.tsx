@@ -1,20 +1,26 @@
 import { JSX  } from "preact"
 import { Author } from "./author";
-import styles from './entry.module.scss'
+import styles from './entryCard.module.scss'
+import { EntryDate } from "./entryDate";
 
-export const Entry = (): JSX.Element => {
+export const EntryCard = (): JSX.Element => {
   return (
-    <article className={styles.entry}>
+    <div className={styles.entry}>
       <header className={styles.header}>
         <div className={styles.thumbNail}>
           <img className={styles.thumbNail_img} src="https://via.placeholder.com/480x300" />
         </div>
         <h2 className={styles.header_h}>記事のタイトル</h2>
+        <div class={styles.header_util}>
+          <Author 
+            thumbNail="https://via.placeholder.com/480x300"
+            name="studio-kakky"
+          />
+          <EntryDate />
+        </div>
+        
       </header>
-      <Author 
-        thumbNail="https://via.placeholder.com/480x300"
-        name="studio-kakky"
-      />
+
       <div className={styles.body}>
         <div className="wisywig"
           dangerouslySetInnerHTML={{__html: `
@@ -24,6 +30,9 @@ export const Entry = (): JSX.Element => {
         >
         </div>
       </div>
-    </article>
+      <footer className={styles.footer}>
+        <a href="" className={styles.footer_link}>もっと見る</a>
+      </footer>
+    </div>
   )
 };

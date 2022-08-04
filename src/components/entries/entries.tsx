@@ -1,11 +1,16 @@
 import { JSX } from "preact"
 import styles from './entries.module.scss';
-import { Entry } from "./entry";
+import { EntryCard } from "./entryCard";
 
 export const Entries = ():JSX.Element => {
   return (
     <div className={styles.entryList}>
-      <Entry />
+      <div href='/' className={styles.entryItem}>
+        <EntryCard />
+      </div>
+      <div href='/' className={styles.entryItem}>
+        <EntryCard />
+      </div>
     </div>
   )
 }

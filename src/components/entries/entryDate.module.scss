@@ -1,0 +1,13 @@
+.entryDate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #aaa;
+  font-size: 14px;
+  &_icon {
+    font-size: 14px;
+  }
+  &_date {
+    line-height: 1;
+  }
+}

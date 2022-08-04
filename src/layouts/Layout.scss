@@ -18,7 +18,7 @@ html {
 body {
   margin: 0;
   color: #222;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 :global(h1) {
@@ -32,4 +32,13 @@ body {
 :global(code) {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+a {
+  color: #0068B2;
+}
+.wisywig {
+  p {
+    margin: 0 0 24px;
+  }
 }
