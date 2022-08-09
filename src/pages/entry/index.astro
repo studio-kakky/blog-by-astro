@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { CommonHeader } from '../../components/common/header';
+import { Entry } from '../../components/entries/entry'
+---
+<style>
+	main {
+		margin: 0;
+		background-color: #fff;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+</style>
+<Layout title="Welcome to Astro.">
+	<CommonHeader />
+	<main>
+		<Entry />
+	</main>
+</Layout>

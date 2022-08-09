@@ -1,17 +1,20 @@
 .header {
   padding: 20px;
   background-color: #fff;
-  border-bottom: 1px solid #0068B2;
+  max-width: 1200px;
+  margin: 0 auto;
   &_h {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
     margin: 0;
-    gap: 8px;
+    gap: 4px;
     &_text {
-      color: #0068B2;
+      font-family: 'Roboto';
+      font-weight: 200;
+      color: #666;
       line-height: 1;
-      font-size: 15px;
+      font-size: 18px;
     }
   }
 }
@@ -21,6 +24,14 @@
   width: 200px;
   svg {
     position: relative;
-    fill: #0068B2;
+    fill: #666;
+  }
+}
+
+.description {
+  margin-top: 8px;
+  font-size: 12px;
+  p {
+    margin: 0;
   }
 }

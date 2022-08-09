@@ -9,7 +9,7 @@ interface Props {
 export const Author = (props: Props): JSX.Element => {
   return (
     <div className={styles.author}>
-        <img className={styles.author_img} src="https://via.placeholder.com/480x300" />
+        <img className={styles.author_img} src={props.thumbNail} />
         <p className={styles.author_name}>studio-kakky</p>
       </div>
   )

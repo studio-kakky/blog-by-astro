@@ -9,7 +9,7 @@
 }
 
 html {
-  font-family: system-ui, sans-serif;
+  font-family: "Noto Sans JP";
   font-size: var(--font-size-base);
   color: var(--color-text);
   background-color: var(--color-bg);
@@ -17,7 +17,7 @@ html {
 
 body {
   margin: 0;
-  color: #222;
+  color: #666;
   font-size: 16px;
 }
 
@@ -29,16 +29,11 @@ body {
   font-size: var(--font-size-lg);
 }
 
-:global(code) {
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
 a {
   color: #0068B2;
 }
 .wisywig {
   p {
-    margin: 0 0 24px;
+    margin: 0 0 12px;
   }
 }
