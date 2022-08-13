@@ -12,6 +12,6 @@
     // Add type definitions for our Vite runtime.
     "types": ["vite/client"],
     "jsxImportSource": "preact",
-    "jsx": "preserve",
+    "jsx": "preserve"
   }
 }

@@ -1,6 +1,6 @@
-import { JSX } from 'preact'
+import { JSX } from 'preact';
 
-import styles from './entry.module.scss'
+import styles from './entry.module.scss';
 import { EntryDate } from './entryDate';
 
 export const Entry = (): JSX.Element => {
@@ -16,26 +16,41 @@ export const Entry = (): JSX.Element => {
         </div>
       </header>
       <main className={styles.body}>
-        <div className='wisywig'>
-          <p>グラフィックと活版印刷のオペレーターはこれをよく知っています。実際、コミュニケーションの世界を扱うすべての専門家はこれらの単語と安定した関係を持っていますが、それは何ですか？ Lorem ipsum はダミーテキストで意味がありません。</p>
+        <div className="wisywig">
+          <p>
+            グラフィックと活版印刷のオペレーターはこれをよく知っています。実際、コミュニケーションの世界を扱うすべての専門家はこれらの単語と安定した関係を持っていますが、それは何ですか？
+            Lorem ipsum はダミーテキストで意味がありません。
+          </p>
         </div>
       </main>
       <footer className={styles.footer}>
         <nav className={styles.footerNavi}>
           <li className={styles.footerNavi_item}>
             <a className={styles.footerNavi_item_a} href="/">
-              <span className={`material-icons ${styles.footerNavi_item_a_icon}`}>arrow_back_ios</span>
-              <span className={styles.footerNavi_item_a_text}>前の記事の長い名前前の記事の長い名前</span>
+              <span
+                className={`material-icons ${styles.footerNavi_item_a_icon}`}
+              >
+                arrow_back_ios
+              </span>
+              <span className={styles.footerNavi_item_a_text}>
+                前の記事の長い名前前の記事の長い名前
+              </span>
             </a>
           </li>
           <li className={styles.footerNavi_item}>
             <a className={styles.footerNavi_item_a} href="/">
-              <span className={styles.footerNavi_item_a_text}>次の記事のなまえ</span>
-              <span className={`material-icons ${styles.footerNavi_item_a_icon}`}>arrow_forward_ios</span>
+              <span className={styles.footerNavi_item_a_text}>
+                次の記事のなまえ
+              </span>
+              <span
+                className={`material-icons ${styles.footerNavi_item_a_icon}`}
+              >
+                arrow_forward_ios
+              </span>
             </a>
           </li>
         </nav>
       </footer>
     </article>
   );
-}
+};
