@@ -4,9 +4,9 @@ import { CommonHeader } from '../components/common/header';
 import { Entries } from '../components/entries/entries';
 import { getSdk } from '../graphql/generated/graphql'
 import { getGraphqlClient } from '../shared/libs/graphql-client/getGraphqlClient';
+import { EntrySummary } from '../shared/models/entry/entry-summary';
 
 const data = await getSdk(getGraphqlClient()).getBlogArticles()
-
 ---
 <style>
 	main {
