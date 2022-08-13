@@ -1,0 +1,12 @@
+query getBlogArticles {
+  blogArticleCollection {
+    items {
+      sys {
+        publishedAt
+      }
+      ... on BlogArticle {
+        title
+      }
+    }
+  }
+}

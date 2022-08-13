@@ -18,3 +18,9 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+.env
+
+# grphql
+src/graphql/schema.graphql
+src/graphql/generated
