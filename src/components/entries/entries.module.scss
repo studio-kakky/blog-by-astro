@@ -1,0 +1,22 @@
+@use '../../styles/_common.scss' as common;
+
+.entryList {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.entryItem {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+  @include common.mq(sm) {
+    width: calc(50% - 32px);
+  }
+  &:hover {
+    background-color: #eee;
+  }
+}

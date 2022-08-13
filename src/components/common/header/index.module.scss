@@ -1,0 +1,37 @@
+.header {
+  padding: 20px;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  &_h {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 0;
+    gap: 4px;
+    &_text {
+      font-family: 'Roboto';
+      font-weight: 200;
+      color: #666;
+      line-height: 1;
+      font-size: 18px;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  width: 200px;
+  svg {
+    position: relative;
+    fill: #666;
+  }
+}
+
+.description {
+  margin-top: 8px;
+  font-size: 12px;
+  p {
+    margin: 0;
+  }
+}

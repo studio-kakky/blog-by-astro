@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { CommonHeader } from '../components/common/header';
-import { Entries } from '../components/entries/entries';
+import Layout from '../../layouts/Layout.astro';
+import { CommonHeader } from '../../components/common/header';
+import { Entry } from '../../components/entries/entry'
 ---
 <style>
 	main {
@@ -14,6 +14,6 @@ import { Entries } from '../components/entries/entries';
 <Layout title="Welcome to Astro.">
 	<CommonHeader />
 	<main>
-		<Entries />
+		<Entry />
 	</main>
 </Layout>

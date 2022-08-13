@@ -9,6 +9,13 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^1.0.0-beta.61"
+    "astro": "^1.0.0-beta.61",
+    "sass": "^1.54.0"
+  },
+  "dependencies": {
+    "@astrojs/preact": "^0.5.2",
+    "@types/luxon": "^3.0.0",
+    "luxon": "^3.0.1",
+    "preact": "^10.10.0"
   }
 }
