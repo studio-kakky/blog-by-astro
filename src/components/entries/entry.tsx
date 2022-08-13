@@ -11,7 +11,7 @@ export const Entry = (): JSX.Element => {
       </div>
       <header className={styles.header}>
         <h2 className={styles.header_h}>記事のタイトル</h2>
-        <div class={styles.util}>
+        <div className={styles.util}>
           <EntryDate />
         </div>
       </header>
