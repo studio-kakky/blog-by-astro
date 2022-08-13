@@ -2,6 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import { CommonHeader } from '../components/common/header';
 import { Entries } from '../components/entries/entries';
+import { getSdk } from '../graphql/generated/graphql'
+import { getGraphqlClient } from '../shared/libs/graphql-client/getGraphqlClient';
+
+const data = await getSdk(getGraphqlClient()).getBlogArticles()
+
 ---
 <style>
 	main {
@@ -13,6 +18,7 @@ import { Entries } from '../components/entries/entries';
 </style>
 <Layout title="Welcome to Astro.">
 	<CommonHeader />
+	<pre>{JSON.stringify(data, null, 2)}</pre>
 	<main>
 		<Entries />
 	</main>

@@ -28,5 +28,5 @@ module.exports = {
       version: '16.0',
     },
   },
-  ignorePatterns: ['.eslintrc.*'],
+  ignorePatterns: ['.eslintrc.*', 'src/graphql/generated/*'],
 };

@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "prepare": "husky install",
     "gql-codegen": "run-s gql-codegen:*",
-    "gql-codegen:load-schema": "source .env && source .env && npx get-graphql-schema -h \"authorization=Bearer $CONTENTFUL_API_TOKEN\" https://graphql.contentful.com/content/v1/spaces/$CONTENTFUL_SPACE_ID > src/graphql/schema.graphql",
+    "gql-codegen:load-schema": "source .env && source .env && npx get-graphql-schema -h \"authorization=Bearer $PUBLIC_CONTENTFUL_API_TOKEN\" https://graphql.contentful.com/content/v1/spaces/$PUBLIC_CONTENTFUL_SPACE_ID > src/graphql/schema.graphql",
     "gql-codegen:generate": "graphql-codegen --config ./codegen.yaml",
     "lint": "eslint ."
   },
@@ -34,6 +34,7 @@
     "@astrojs/preact": "^0.5.2",
     "@types/luxon": "^3.0.0",
     "graphql": "^16.5.0",
+    "graphql-request": "^4.3.0",
     "luxon": "^3.0.1",
     "preact": "^10.10.0"
   }
