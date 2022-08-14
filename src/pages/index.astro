@@ -1,12 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { CommonHeader } from '../components/common/header';
-import { Entries } from '../components/entries/entries';
-import { getSdk } from '../graphql/generated/graphql'
-import { getGraphqlClient } from '../shared/libs/graphql-client/getGraphqlClient';
+import { Articles } from '../components/articles/articles';
+import { getArticleSummary } from '../shared/models/article/get-article-summary';
 
-const data = await getSdk(getGraphqlClient()).getBlogArticles()
-
+const articles = await getArticleSummary();
 ---
 <style>
 	main {
@@ -18,8 +16,7 @@ const data = await getSdk(getGraphqlClient()).getBlogArticles()
 </style>
 <Layout title="Welcome to Astro.">
 	<CommonHeader />
-	<pre>{JSON.stringify(data, null, 2)}</pre>
 	<main>
-		<Entries />
+		<Articles items={articles}/>
 	</main>
 </Layout>

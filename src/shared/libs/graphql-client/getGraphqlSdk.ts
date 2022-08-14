@@ -1,8 +1,9 @@
 import { GraphQLClient } from 'graphql-request';
+import { getSdk, Sdk } from '../../../graphql/generated/graphql';
 
 const baseUrl = 'https://graphql.contentful.com/content/v1/spaces/';
 
-export const getGraphqlClient = (): GraphQLClient => {
+const getGraphqlClient = (): GraphQLClient => {
   const endpointUrl = `${baseUrl}${import.meta.env.PUBLIC_CONTENTFUL_SPACE_ID}`;
 
   return new GraphQLClient(endpointUrl, {
@@ -11,4 +12,8 @@ export const getGraphqlClient = (): GraphQLClient => {
       'Access-Control-Allow-Origin': '*',
     },
   });
+};
+
+export const getGraphqlSdk = (): Sdk => {
+  return getSdk(getGraphqlClient());
 };

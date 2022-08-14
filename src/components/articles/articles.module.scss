@@ -1,13 +1,13 @@
 @use '../../styles/_common.scss' as common;
 
-.entryList {
+.articleList {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.entryItem {
+.articleItem {
   color: inherit;
   text-decoration: none;
   width: 100%;

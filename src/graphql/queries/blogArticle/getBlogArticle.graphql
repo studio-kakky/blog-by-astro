@@ -1,11 +1,22 @@
 query getBlogArticles {
   blogArticleCollection {
-    items {
+    article: items {
       sys {
+        id
         publishedAt
       }
       ... on BlogArticle {
         title
+        heroImage {
+          ... on Asset {
+            url
+            width
+            height
+          }
+        }
+        summary {
+          json
+        }
       }
     }
   }

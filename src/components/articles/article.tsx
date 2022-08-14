@@ -1,18 +1,20 @@
 import { JSX } from 'preact';
+import { DateTime } from 'luxon';
 
-import styles from './entry.module.scss';
-import { EntryDate } from './entryDate';
+import styles from './article.module.scss';
+import { ArticleDate } from './articleDate';
+import { AppDateTime } from '../../shared/models/date/app-date-time';
 
-export const Entry = (): JSX.Element => {
+export const Article = (): JSX.Element => {
   return (
-    <article className={styles.Entry}>
+    <article className={styles.article}>
       <div className={styles.hero}>
         <img className={styles.hero_img} src="https://picsum.photos/480/300" />
       </div>
       <header className={styles.header}>
         <h2 className={styles.header_h}>記事のタイトル</h2>
         <div className={styles.util}>
-          <EntryDate />
+          <ArticleDate dateTime={new AppDateTime(DateTime.now().toSeconds())} />
         </div>
       </header>
       <main className={styles.body}>
