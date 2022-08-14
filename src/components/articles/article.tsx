@@ -1,7 +1,7 @@
 import { JSX } from 'preact';
 
-import styles from './entry.module.scss';
-import { EntryDate } from './entryDate';
+import styles from './article.module.scss';
+import { ArticleDate } from './articleDate';
 
 export const Entry = (): JSX.Element => {
   return (
@@ -12,7 +12,7 @@ export const Entry = (): JSX.Element => {
       <header className={styles.header}>
         <h2 className={styles.header_h}>記事のタイトル</h2>
         <div className={styles.util}>
-          <EntryDate />
+          <ArticleDate />
         </div>
       </header>
       <main className={styles.body}>

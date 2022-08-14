@@ -1,8 +1,8 @@
 import { JSX } from 'preact';
-import styles from './entryCard.module.scss';
-import { EntryDate } from './entryDate';
+import styles from './articleCard.module.scss';
+import { ArticleDate } from './articleDate';
 
-export const EntryCard = (): JSX.Element => {
+export const ArticleCard = (): JSX.Element => {
   return (
     <div className={styles.entry}>
       <header className={styles.header}>
@@ -15,7 +15,7 @@ export const EntryCard = (): JSX.Element => {
         />
       </div>
       <div className={styles.util}>
-        <EntryDate />
+        <ArticleDate />
       </div>
       <div className={styles.body}>
         <p>

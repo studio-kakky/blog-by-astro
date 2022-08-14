@@ -1,8 +1,8 @@
 import { JSX } from 'preact';
 import { DateTime } from 'luxon';
-import styles from './entryDate.module.scss';
+import styles from './articleDate.module.scss';
 
-export const EntryDate = (): JSX.Element => {
+export const ArticleDate = (): JSX.Element => {
   return (
     <>
       <div className={styles.entryDate}>

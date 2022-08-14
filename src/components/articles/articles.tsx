@@ -1,18 +1,18 @@
 import { JSX } from 'preact';
-import styles from './entries.module.scss';
-import { EntryCard } from './entryCard';
+import styles from './articles.module.scss';
+import { ArticleCard } from './articleCard';
 
-export const Entries = (): JSX.Element => {
+export const Articles = (): JSX.Element => {
   return (
     <div className={styles.entryList}>
       <a href="/" className={styles.entryItem}>
-        <EntryCard />
+        <ArticleCard />
       </a>
       <a href="/" className={styles.entryItem}>
-        <EntryCard />
+        <ArticleCard />
       </a>
       <a href="/" className={styles.entryItem}>
-        <EntryCard />
+        <ArticleCard />
       </a>
     </div>
   );
