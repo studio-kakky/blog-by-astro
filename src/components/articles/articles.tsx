@@ -1,19 +1,20 @@
 import { JSX } from 'preact';
 import styles from './articles.module.scss';
 import { ArticleCard } from './articleCard';
+import { ArticleSummary } from '../../shared/models/article/article-summary';
 
-export const Articles = (): JSX.Element => {
+interface Props {
+  items: ArticleSummary[];
+}
+
+export const Articles = ({ items }: Props): JSX.Element => {
   return (
     <div className={styles.articleList}>
-      <a href="/" className={styles.articleItem}>
-        <ArticleCard />
-      </a>
-      <a href="/" className={styles.articleItem}>
-        <ArticleCard />
-      </a>
-      <a href="/" className={styles.articleItem}>
-        <ArticleCard />
-      </a>
+      {items.map((item) => (
+        <a href="/" className={styles.articleItem}>
+          <ArticleCard item={item} />
+        </a>
+      ))}
     </div>
   );
 };

@@ -1,9 +1,11 @@
 import { JSX } from 'preact';
+import { DateTime } from 'luxon';
 
 import styles from './article.module.scss';
 import { ArticleDate } from './articleDate';
+import { AppDateTime } from '../../shared/models/date/app-date-time';
 
-export const Entry = (): JSX.Element => {
+export const Article = (): JSX.Element => {
   return (
     <article className={styles.article}>
       <div className={styles.hero}>
@@ -12,7 +14,7 @@ export const Entry = (): JSX.Element => {
       <header className={styles.header}>
         <h2 className={styles.header_h}>記事のタイトル</h2>
         <div className={styles.util}>
-          <ArticleDate />
+          <ArticleDate dateTime={new AppDateTime(DateTime.now().toSeconds())} />
         </div>
       </header>
       <main className={styles.body}>

@@ -1,21 +1,23 @@
 import { JSX } from 'preact';
+import { ArticleSummary } from '../../shared/models/article/article-summary';
 import styles from './articleCard.module.scss';
 import { ArticleDate } from './articleDate';
 
-export const ArticleCard = (): JSX.Element => {
+interface Props {
+  item: ArticleSummary;
+}
+
+export const ArticleCard = ({ item }: Props): JSX.Element => {
   return (
     <div className={styles.article}>
       <header className={styles.header}>
-        <h2 className={styles.header_h}>記事のタイトル</h2>
+        <h2 className={styles.header_h}>{item.title}</h2>
       </header>
       <div className={styles.thumbNail}>
-        <img
-          className={styles.thumbNail_img}
-          src="https://picsum.photos/480/300"
-        />
+        <img className={styles.thumbNail_img} src={item.heroImage.url} />
       </div>
       <div className={styles.util}>
-        <ArticleDate />
+        <ArticleDate dateTime={item.updatedAt} />
       </div>
       <div className={styles.body}>
         <p>

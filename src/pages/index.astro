@@ -16,8 +16,7 @@ const articles = await getArticleSummary();
 </style>
 <Layout title="Welcome to Astro.">
 	<CommonHeader />
-	<pre>{JSON.stringify(articles, null, 2)}</pre>
 	<main>
-		<Articles />
+		<Articles items={articles}/>
 	</main>
 </Layout>
