@@ -4,7 +4,7 @@ import { ArticleDate } from './articleDate';
 
 export const ArticleCard = (): JSX.Element => {
   return (
-    <div className={styles.entry}>
+    <div className={styles.article}>
       <header className={styles.header}>
         <h2 className={styles.header_h}>記事のタイトル</h2>
       </header>

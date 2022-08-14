@@ -5,7 +5,7 @@ import { ArticleDate } from './articleDate';
 
 export const Entry = (): JSX.Element => {
   return (
-    <article className={styles.Entry}>
+    <article className={styles.article}>
       <div className={styles.hero}>
         <img className={styles.hero_img} src="https://picsum.photos/480/300" />
       </div>
