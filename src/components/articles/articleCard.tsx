@@ -2,7 +2,6 @@ import { JSX } from 'preact';
 import { ArticleSummary } from '../../shared/models/article/article-summary';
 import styles from './articleCard.module.scss';
 import { ArticleDate } from './articleDate';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 interface Props {
   item: ArticleSummary;

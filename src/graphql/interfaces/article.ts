@@ -4,6 +4,7 @@ import { ImageAsset } from './image-asset';
 export interface ArticleSummaryResponse {
   title?: string | null;
   sys: {
+    id: string;
     publishedAt: string | null;
   };
   heroImage?: ImageAsset;

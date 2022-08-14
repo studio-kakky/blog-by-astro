@@ -11,7 +11,7 @@ export const Articles = ({ items }: Props): JSX.Element => {
   return (
     <div className={styles.articleList}>
       {items.map((item) => (
-        <a href="/" className={styles.articleItem}>
+        <a href="/" className={styles.articleItem} key={item.id}>
           <ArticleCard item={item} />
         </a>
       ))}

@@ -2,6 +2,7 @@ query getBlogArticles {
   blogArticleCollection {
     article: items {
       sys {
+        id
         publishedAt
       }
       ... on BlogArticle {
