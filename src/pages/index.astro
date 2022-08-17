@@ -5,6 +5,9 @@ import { Articles } from '../components/articles/articles';
 import { getArticleSummary } from '../shared/models/article/get-article-summary';
 
 const articles = await getArticleSummary();
+const summaries = Array.from(Array(5)).reduce((output) => {
+	return output.concat(articles)
+}, [])
 ---
 <style>
 	main {
@@ -17,6 +20,6 @@ const articles = await getArticleSummary();
 <Layout title="Welcome to Astro.">
 	<CommonHeader />
 	<main>
-		<Articles items={articles}/>
+		<Articles items={summaries}/>
 	</main>
 </Layout>

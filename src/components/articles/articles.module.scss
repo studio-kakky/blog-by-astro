@@ -15,6 +15,18 @@
   border-radius: 10px;
   @include common.mq(sm) {
     width: calc(50% - 32px);
+    border-bottom: none;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 16px;
+    margin-bottom: -16px;
+    border-bottom: 1px #eee solid;
+    @include common.mq(sm) {
+      display: none;
+    }
   }
   &:hover {
     background-color: #eee;
