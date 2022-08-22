@@ -12,13 +12,13 @@
 }
 
 .header {
-  margin: 16px 0;
+  margin: 24px 0;
   padding: 0 20px;
   &_h {
     margin: 0;
     font-weight: 700;
     color: #666;
-    font-size: 18px;
+    font-size: 24px;
   }
 }
 
@@ -37,7 +37,7 @@
 .util {
   margin-top: 8px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: baseline;
 }
 

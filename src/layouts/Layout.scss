@@ -33,6 +33,17 @@ a {
   color: #0068b2;
 }
 .wisywig {
+  h1,
+  h2,
+  h3 {
+    color: #111;
+    margin: 30px 0 22px;
+    padding: 2px 0 2px 16px;
+    border-left: 4px solid #666;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
   p {
     margin: 0 0 12px;
   }
