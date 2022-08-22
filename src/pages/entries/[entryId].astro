@@ -4,12 +4,30 @@ import { getArticles } from "../../shared/models/article/get-articles";
 import Layout from '../../layouts/Layout.astro';
 import { CommonHeader } from '../../components/common/header';
 import { ArticleComponent } from '../../components/articles/article'
+import { ArticleResponse } from "../../graphql/interfaces/article";
+import { LinkItem } from "../../shared/models/linke-item/link-item";
+import { Article } from "../../shared/models/article/article";
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const makeLink = (article: Article): LinkItem | undefined => {
+    if (!article || !article.title) {
+      return;
+    }
+
+    return {
+      label: article.title,
+      url: `/entries/${article.id}`
+    }
+  } 
+
   const articles = await getArticles()
   
-  return articles.map(article => {
-    return { params: { entryId: article.id }, props: { post: article} }
+  return articles.map((article, idx) => {
+    const next = makeLink(articles[idx - 1]);
+    const previous = makeLink(article[idx + 1]); 
+
+
+    return { params: { entryId: article.id }, props: { post: article, next, previous} }
   })
 }
 
