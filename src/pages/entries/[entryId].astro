@@ -1,0 +1,24 @@
+---
+import { GetStaticPaths } from "astro";
+import { getArticles } from "../../shared/models/article/get-articles";
+import Layout from '../../layouts/Layout.astro';
+import { CommonHeader } from '../../components/common/header';
+import { ArticleComponent } from '../../components/articles/article'
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const articles = await getArticles()
+  
+  return articles.map(article => {
+    return { params: { entryId: article.id }, props: { post: article} }
+  })
+}
+
+
+const { post } = Astro.props;
+---
+<Layout title="Welcome to Astro.">
+	<CommonHeader />
+	<main>
+		<ArticleComponent article={post}/>
+	</main>
+</Layout>

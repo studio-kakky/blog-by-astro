@@ -14,7 +14,7 @@ query getBlogArticles {
             height
           }
         }
-        summary {
+        body {
           json
         }
       }

@@ -1,29 +1,29 @@
 import { JSX } from 'preact';
-import { DateTime } from 'luxon';
 
 import styles from './article.module.scss';
 import { ArticleDate } from './articleDate';
-import { AppDateTime } from '../../shared/models/date/app-date-time';
+import { Article } from '../../shared/models/article/article';
 
-export const Article = (): JSX.Element => {
+interface Props {
+  article: Article;
+}
+
+export const ArticleComponent = ({ article }: Props): JSX.Element => {
   return (
     <article className={styles.article}>
-      <div className={styles.hero}>
-        <img className={styles.hero_img} src="https://picsum.photos/480/300" />
-      </div>
+      {article.heroImage !== undefined && (
+        <div className={styles.hero}>
+          <img className={styles.hero_img} src={article.heroImage.url} />
+        </div>
+      )}
       <header className={styles.header}>
-        <h2 className={styles.header_h}>記事のタイトル</h2>
+        <h2 className={styles.header_h}>{article.title}</h2>
         <div className={styles.util}>
-          <ArticleDate dateTime={new AppDateTime(DateTime.now().toSeconds())} />
+          <ArticleDate dateTime={article.updatedAt} />
         </div>
       </header>
       <main className={styles.body}>
-        <div className="wisywig">
-          <p>
-            グラフィックと活版印刷のオペレーターはこれをよく知っています。実際、コミュニケーションの世界を扱うすべての専門家はこれらの単語と安定した関係を持っていますが、それは何ですか？
-            Lorem ipsum はダミーテキストで意味がありません。
-          </p>
-        </div>
+        <div className="wisywig">{article.body}</div>
       </main>
       <footer className={styles.footer}>
         <nav className={styles.footerNavi}>

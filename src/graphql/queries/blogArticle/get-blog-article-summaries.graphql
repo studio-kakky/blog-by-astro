@@ -1,0 +1,23 @@
+query getBlogArticleSummaries {
+  blogArticleCollection {
+    article: items {
+      sys {
+        id
+        publishedAt
+      }
+      ... on BlogArticle {
+        title
+        heroImage {
+          ... on Asset {
+            url
+            width
+            height
+          }
+        }
+        summary {
+          json
+        }
+      }
+    }
+  }
+}
