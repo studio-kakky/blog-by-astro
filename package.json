@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "prepare": "husky install",
     "gql-codegen": "run-s gql-codegen:*",
-    "gql-codegen:load-schema": "source .env && source .env && npx get-graphql-schema -h \"authorization=Bearer $PUBLIC_CONTENTFUL_API_TOKEN\" https://graphql.contentful.com/content/v1/spaces/$PUBLIC_CONTENTFUL_SPACE_ID > src/graphql/schema.graphql",
+    "gql-codegen:load-schema": "if [ -e .env ];then source .env;fi && npx get-graphql-schema -h \"authorization=Bearer $PUBLIC_CONTENTFUL_API_TOKEN\" https://graphql.contentful.com/content/v1/spaces/$PUBLIC_CONTENTFUL_SPACE_ID > src/graphql/schema.graphql",
     "gql-codegen:generate": "graphql-codegen --config ./codegen.yaml",
     "lint": "eslint ."
   },
