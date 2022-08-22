@@ -12,3 +12,15 @@ export interface ArticleSummaryResponse {
     json: Document;
   };
 }
+
+export interface ArticleResponse {
+  title?: string | null;
+  sys: {
+    id: string;
+    publishedAt: string | null;
+  };
+  heroImage?: ImageAsset;
+  body?: {
+    json: Document;
+  };
+}

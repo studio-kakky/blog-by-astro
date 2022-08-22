@@ -6,14 +6,19 @@
   box-sizing: border-box;
 }
 
+.main {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
 .header {
-  margin: 16px 0;
+  margin: 24px 0;
   padding: 0 20px;
   &_h {
     margin: 0;
     font-weight: 700;
     color: #666;
-    font-size: 18px;
+    font-size: 24px;
   }
 }
 
@@ -32,7 +37,7 @@
 .util {
   margin-top: 8px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: baseline;
 }
 
@@ -49,7 +54,9 @@
 .footer {
   background-color: transparent;
   width: 100%;
-  padding-top: 20px;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 20px 0 50px;
   text-align: right;
   box-sizing: border-box;
 }
